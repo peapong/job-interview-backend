@@ -20,15 +20,6 @@ app.get('/', async (request, reply) => {
     return 'Hello there! 👋';
 });
 
-// // Multiple parameters within same couple of slash "/"
-// // e.g. /example/100-500 -> prints 100 and 500
-app.get('/example/:lat-:lon', (req, reply) => {
-    console.log(req.params);
-    console.log(req.params);
-
-    return { msg: 'success' };
-});
-
 // public route
 app.register((instance, _, done) => {
     instance.decorateRequest('systemConfig', null);
