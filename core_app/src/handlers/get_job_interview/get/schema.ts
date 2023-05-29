@@ -1,7 +1,7 @@
 import { type Static, Type } from '@sinclair/typebox';
 import type CustomRouteShorthandOptionsWithHandler from '../../../../fastify';
 import { type FastifySchema } from 'fastify';
-import { getJobInterviewMasterSchema } from '../../../data_services/model/get_job_interview_master/sql';
+import { getJobInterviewMasterSchema } from '../../../data_services/model/get_job_interview_master';
 
 export const getJobInterviewListQuerySchema = Type.Object({
     limit: Type.Optional(Type.Integer({ exclusiveMinimum: 0 })), // > 0
