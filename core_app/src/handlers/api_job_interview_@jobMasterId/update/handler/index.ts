@@ -29,7 +29,7 @@ export const taskUpdateJobInterviewById: IRouteConfigUpdateJobInterviewById['han
         }
     } catch (error) {
         res.status(500).send({
-            error: 'An error occurred while update job interviews.',
+            error: 'An error occurred while update status id in job interviews db.',
         });
     }
 };

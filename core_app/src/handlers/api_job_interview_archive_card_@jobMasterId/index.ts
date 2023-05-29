@@ -1,0 +1,1 @@
+export { handlerUpdateJobInterviewArchiveCard } from './update';
