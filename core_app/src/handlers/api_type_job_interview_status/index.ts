@@ -1,0 +1,1 @@
+export { handlerGetTypeJobInterviewStatus } from './get';

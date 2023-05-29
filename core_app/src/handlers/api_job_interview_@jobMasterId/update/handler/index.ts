@@ -1,7 +1,7 @@
 import { mysqlConfig } from '../../../../utils';
-import { IRouteConfigUpdateJobInterviewById } from '../schema';
+import { type IRouteConfigUpdateJobInterviewById } from '../schema';
 import { updateJobInterviewMaster } from '../../../../data_services/model/update_job_interview_master';
-import { OkPacket } from 'mysql2';
+import { type OkPacket } from 'mysql2';
 
 export const taskUpdateJobInterviewById: IRouteConfigUpdateJobInterviewById['handler'] = async (req, res) => {
     const { params: reqParams, body: reqBody } = req;

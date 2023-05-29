@@ -1,6 +1,6 @@
 import { mysqlConfig } from '../../../../utils';
 import { getJobInterviewMaster } from '../../../../data_services/model/get_job_interview_master';
-import { IRouteConfigGetJobInterviewList } from '../schema';
+import { type IRouteConfigGetJobInterviewList } from '../schema';
 
 export const taskGetJobInterview: IRouteConfigGetJobInterviewList['handler'] = async (req, res) => {
     const { query: reqQuery } = req;

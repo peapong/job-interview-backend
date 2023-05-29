@@ -1,0 +1,1 @@
+export { handlerGetJobInterviewDetailById } from './get';

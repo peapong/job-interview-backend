@@ -1,0 +1,1 @@
+export { handlerUpdateJobInterview } from './update';
