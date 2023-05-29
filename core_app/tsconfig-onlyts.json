@@ -3,7 +3,8 @@
   "compilerOptions": {
     "incremental": true,
     "noEmit": false,
-    "outDir": "lib",
+    "rootDir": "./src",
+    "outDir": "./lib",
     "module": "commonjs",
     "target": "es2017",
     "declaration": true,

@@ -8,6 +8,5 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "exclude": ["node_modules", "lib/**/*"],
-  "include": ["**/*.ts"]
+  "include": ["./src/**/*.ts"]
 }
