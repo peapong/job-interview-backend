@@ -18,13 +18,13 @@ const updateJobInterviewMasterById = (params: IUpdateJobInterviewMasterParams): 
     const { matchProps, values } = params;
     const { job_master_id } = matchProps;
     const { job_interview_status_id } = values;
-    console.log('matchProps->', job_master_id, 'values->', job_interview_status_id);
+
     const sql = `
     UPDATE job_interview_master
     SET job_interview_status_id = ${job_interview_status_id}
     WHERE job_master_id = "${job_master_id}";
     `;
-    console.log(sql);
+
     return sql;
 };
 
