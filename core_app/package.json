@@ -1,0 +1,47 @@
+{
+  "name": "job-interview-backend",
+  "version": "1.0.0",
+  "description": "Test backend.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "start": "node build/index.js",
+    "tsc:onlyts": "tsc -b tsconfig-onlyts.json",
+    "compile": "yarn tsc:onlyts",
+    "prettier:config": "prettier --no-config --write \"./*.{json,yml}\"",
+    "prettier:ts": "prettier --write \"./src/**/*.ts\"",
+    "prettier": "yarn prettier:config --loglevel warn && yarn prettier:ts --loglevel warn",
+    "build": "yarn prettier && yarn compile",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peapong/back-end-test-purple.git"
+  },
+  "author": "Pongsatorn Keawaim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peapong/back-end-test-purple/issues"
+  },
+  "homepage": "https://github.com/peapong/back-end-test-purple#readme",
+  "dependencies": {
+    "@fastify/cors": "^8.3.0",
+    "@fastify/mysql": "^4.1.0",
+    "@fastify/sensible": "^5.2.0",
+    "@fastify/swagger": "^8.5.1",
+    "@sinclair/typebox": "^0.28.13",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.17.0",
+    "mysql2": "^3.3.3",
+    "npm": "^9.6.7",
+    "rxjs": "^7.8.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^20.2.5",
+    "prettier": "2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}

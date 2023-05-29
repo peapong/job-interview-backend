@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/data_services/model/get_job_interview_master/index.ts"],"names":[],"mappings":"AAEA,MAAM,WAAW,iCAAiC;IAC9C,KAAK,CAAC,EAAE,MAAM,CAAC;IACf,MAAM,CAAC,EAAE,MAAM,CAAC;CACnB;AAED,MAAM,WAAW,yBAAyB;IACtC,UAAU,EAAE,iCAAiC,CAAC;CACjD;AAED,wBAAsB,qBAAqB,CAAC,MAAM,EAAE,yBAAyB,GAAG,OAAO,CAAC,MAAM,CAAC,CAE9F"}
