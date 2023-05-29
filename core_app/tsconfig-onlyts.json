@@ -1,11 +1,13 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./build",
+    "incremental": true,
+    "noEmit": false,
+    "outDir": "lib",
+    "module": "commonjs",
+    "target": "es2017",
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true,
     "composite": true
   }
 }

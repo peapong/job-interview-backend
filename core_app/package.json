@@ -2,10 +2,10 @@
   "name": "job-interview-backend",
   "version": "1.0.0",
   "description": "Test backend.",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "start": "node build/index.js",
+    "start": "node lib/index.js",
     "tsc:onlyts": "tsc -b tsconfig-onlyts.json",
     "compile": "yarn tsc:onlyts",
     "prettier:config": "prettier --no-config --write \"./*.{json,yml}\"",
