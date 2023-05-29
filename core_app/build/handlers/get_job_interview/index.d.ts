@@ -1,2 +1,2 @@
-export { handlerGetComFinanceLimit } from './get';
+export { handlerGetJobInterview } from './get';
 //# sourceMappingURL=index.d.ts.map

@@ -16,7 +16,6 @@ exports.getJobInterviewMasterSchema = typebox_1.Type.Object({
 const getAllJobInterviewMaster = (params) => {
     const { matchProps } = params;
     const { limit, offset } = matchProps;
-    console.log('✅check limit--> ', limit, '✅check offset--> ', offset);
     const sql = `
     SELECT j.job_master_id, j.job_interview_status_id, j.title_create_user_name, j.email, j.body_description, j.is_active, j.created_at, t.job_status_name
     FROM job_interview_master j
