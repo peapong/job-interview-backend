@@ -8,7 +8,7 @@ export const getJobInterviewMasterSchema = Type.Object({
     title_create_user_name: Type.String(),
     email: Type.String(),
     body_description: Type.String(),
-    is_active: Type.Boolean(),
+    is_active: Type.Union([Type.Literal('n'), Type.Literal('y')]), // enum('n','y')
     created_at: Type.String({ format: 'date-time' }),
     job_status_name: Type.String(),
 });

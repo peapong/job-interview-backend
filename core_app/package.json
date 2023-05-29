@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/peapong/back-end-test-purple.git"
+    "url": "git+https://github.com/peapong/job-interview-backend.git"
   },
   "author": "Pongsatorn Keawaim",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/peapong/back-end-test-purple/issues"
+    "url": "https://github.com/peapong/job-interview-backend/issues"
   },
-  "homepage": "https://github.com/peapong/back-end-test-purple#readme",
+  "homepage": "https://github.com/peapong/job-interview-backend#readme",
   "dependencies": {
     "@fastify/cors": "^8.3.0",
     "@fastify/mysql": "^4.1.0",

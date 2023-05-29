@@ -6,7 +6,7 @@ export declare const getJobInterviewMasterSchema: import("@sinclair/typebox").TO
     title_create_user_name: import("@sinclair/typebox").TString;
     email: import("@sinclair/typebox").TString;
     body_description: import("@sinclair/typebox").TString;
-    is_active: import("@sinclair/typebox").TBoolean;
+    is_active: import("@sinclair/typebox").TUnion<[import("@sinclair/typebox").TLiteral<"n">, import("@sinclair/typebox").TLiteral<"y">]>;
     created_at: import("@sinclair/typebox").TString;
     job_status_name: import("@sinclair/typebox").TString;
 }>;

@@ -9,7 +9,7 @@ exports.getJobInterviewMasterSchema = typebox_1.Type.Object({
     title_create_user_name: typebox_1.Type.String(),
     email: typebox_1.Type.String(),
     body_description: typebox_1.Type.String(),
-    is_active: typebox_1.Type.Boolean(),
+    is_active: typebox_1.Type.Union([typebox_1.Type.Literal('n'), typebox_1.Type.Literal('y')]),
     created_at: typebox_1.Type.String({ format: 'date-time' }),
     job_status_name: typebox_1.Type.String(),
 });
