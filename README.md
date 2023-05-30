@@ -125,6 +125,8 @@ description
 https://drive.google.com/file/d/1AmJrGxm0VBOqPCF47_T64cm6CXpOoL9I/view?usp=sharing
 
 ## Screenshot
+https://drive.google.com/drive/folders/1rNokn7-piAl74B5EFcMFrAUoswHq_2b0?usp=sharing
+
 ```bash
 GET /explorer/job_interview
 ```
