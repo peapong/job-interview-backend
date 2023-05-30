@@ -5,6 +5,9 @@ services:
     image: "mysql/mysql-server:5.6"
     environment:
       - MYSQL_ROOT_PASSWORD=host
+      - MYSQL_USER=host
+      - MYSQL_PASSWORD=host
+      - MYSQL_DATABASE=job_interview_db
       - TZ=Asia/Bangkok
     ports:
       - "3306:3306"
@@ -19,8 +22,8 @@ services:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
       timeout: 20s
       retries: 10
-    tmpfs:
-      - /var/lib/mysql:rw,noexec,nosuid,size=1024m
+    # tmpfs:
+    #   - /var/lib/mysql:rw,noexec,nosuid,size=1024m
     volumes:
       - ./database:/docker-entrypoint-initdb.d
     networks:
@@ -28,8 +31,6 @@ services:
     restart: always
   
   backend:
-    links:
-      - mysql
     depends_on:
       - mysql
     build: ./core_app
@@ -40,7 +41,7 @@ services:
       MYSQL_USER: host
       MYSQL_PASSWORD: host
       MYSQL_DATABASE: job_interview_db
-      MY_SQL_PORT: 3306
+      # MY_SQL_PORT: 3306
     networks:
       - mynetwork
     restart: always
