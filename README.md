@@ -81,7 +81,7 @@ description
 
 - **Update is_active user to 'n' by job_master_id to archive card user:**
   
-    อัพเดต เปลี่ยนสถานะผู้สัมภาษณ์เป็นการจัดเก็บการ์ด ทำให้ข้อมูลไม่แสดงเมื่อมีการเรียกใช้ ( is_active = 'n' )
+    อัพเดต เพื่อจัดเก็บการ์ดผู้สัมภาษณ์ที่ระบุ ทำให้เมื่อเรียกข้อมูลจะไม่แสดงผู้ใช้ที่จัดเก็บการ์ด ( สถานะใน db คือ is_active = 'n' )
 
     ```bash
       PUT /job_interview/archive/:job_master_id
