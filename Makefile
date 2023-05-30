@@ -1,5 +1,5 @@
 build:
-	cd core_app && yarn build && cd ..
+	cd core_app && yarn install && yarn build && cd ..
 	docker-compose -f docker-compose.yml down
 	docker-compose -f docker-compose.yml up -d
 
