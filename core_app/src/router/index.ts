@@ -3,7 +3,10 @@ import type { FastifyInstance, FastifyPluginCallback } from 'fastify';
 import { checkHealth } from '../handlers/job_interview_health';
 import { handlerGetJobInterview } from '../handlers/api_job_interview';
 import { handlerUpdateJobInterview } from '../handlers/api_job_interview_@jobMasterId';
-import { handlerGetJobInterviewDetailById } from '../handlers/api_job_interview_details_@jobMasterId';
+import {
+    handlerCreateJobInterviewDetailById,
+    handlerGetJobInterviewDetailById,
+} from '../handlers/api_job_interview_details_@jobMasterId';
 import { handlerGetTypeJobInterviewStatus } from '../handlers/api_type_job_interview_status';
 import { handlerUpdateJobInterviewArchiveCard } from '../handlers/api_job_interview_archive_card_@jobMasterId';
 
@@ -19,6 +22,8 @@ const publicRouter: FastifyPluginCallback = (fastify: FastifyInstance, _, done) 
     fastify.put('/job_interview/archive/:job_master_id', handlerUpdateJobInterviewArchiveCard);
     // Get all data in user (job_master_id) to use data detail (Comment.) with limit and offset
     fastify.get('/job_interview/detail/:job_master_id', handlerGetJobInterviewDetailById);
+    // Create comment by job_master_id.
+    fastify.post('/job_interview/detail/:job_master_id', handlerCreateJobInterviewDetailById);
 
     done();
 };
