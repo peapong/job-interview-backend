@@ -22,8 +22,6 @@ services:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
       timeout: 20s
       retries: 10
-    # tmpfs:
-    #   - /var/lib/mysql:rw,noexec,nosuid,size=1024m
     volumes:
       - ./database:/docker-entrypoint-initdb.d
     networks:
@@ -41,10 +39,9 @@ services:
       MYSQL_USER: host
       MYSQL_PASSWORD: host
       MYSQL_DATABASE: job_interview_db
-      # MY_SQL_PORT: 3306
     networks:
       - mynetwork
-    restart: always
+    restart: on-failure
 
 networks:
   mynetwork:
