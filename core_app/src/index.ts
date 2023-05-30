@@ -37,7 +37,7 @@ app.ready((err) => {
 });
 
 // // Run the server!
-app.listen({ port: 8080 }, (err, address) => {
+app.listen({ port: 4000 }, (err, address) => {
     if (err) {
         app.log.error(err);
         process.exit(1);

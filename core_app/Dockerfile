@@ -2,18 +2,25 @@ FROM node:16-buster
 
 WORKDIR /app
 
-RUN mkdir -p app
-RUN cd /app
-COPY package.json .env /app/
+RUN mkdir -p core_app
+RUN cd core_app
 
-RUN yarn install --unsafe-perm=true --force
+# COPY package*.json ./
+
+# RUN cd core_app
+
+COPY . core_app
+
+RUN cd core_app && yarn install --unsafe-perm=true --force
+RUN cd core_app && yarn build
 # RUN yarn build
 
-COPY . app
+# COPY . app
+WORKDIR /app/core_app
 
-EXPOSE 8080
+EXPOSE 4000
 
-ENV ADDRESS=0.0.0.0
-ENV PORT=8080
+# ENV ADDRESS=0.0.0.0
+# ENV PORT=8080
 
 CMD [ "yarn", "start" ]

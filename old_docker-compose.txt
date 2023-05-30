@@ -1,0 +1,113 @@
+# version: "3.7"
+# services:
+#   mysql:
+#     container_name: "mysql_job_interview_db_backend_development"
+#     image: "mysql/mysql-server:5.6"
+#     command:
+#       - mysqld
+#       - "--init-connect='SET NAMES utf8'"
+#       - "--collation-server=utf8_general_ci"
+#       - "--character-set-server=utf8"
+#       - "--innodb-flush-log-at-trx-commit=0"
+#     healthcheck:
+#       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+#       timeout: 20s
+#       retries: 10
+#     ports:
+#       - "3306:3306"
+#     expose:
+#       - 3306
+#     tmpfs:
+#       - /var/lib/mysql:rw,noexec,nosuid,size=1024m
+#     volumes:
+#       - "../database:/docker-entrypoint-initdb.d"
+#     environment:
+#       - MYSQL_ROOT_PASSWORD=host
+#       - TZ=Asia/Bangkok
+#   backend-services:
+#     container_name: "job-interview-backend"
+#     build: ../core_app
+#     # healthcheck:
+#     #   test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+#     #   timeout: 20s
+#     #   retries: 10
+#     ports:
+#       - "8080:8080"
+#     # links:
+#     #   - mysql:mysql
+#     depends_on:
+#       - mysql
+#     network_mode: host 
+#     # environment:
+#     #   MYSQL_DATABASE: job_interview_db
+#     #   MYSQL_USER: host
+#     #   MYSQL_ROOT_PASSWORD: host
+#     #   MYSQL_PASSWORD: host
+#     #   MYSQL_HOST: 0.0.0.0
+#     #   MY_SQL_PORT: 3306
+#     # restart: on-failure
+
+# # Networks to be created to facilitate communication between containers
+# networks:
+#   turingmysql:
+#     driver: bridge
+version: "3.7"
+services:
+  mysql:
+    container_name: mysql_job_interview_db_backend_development
+    image: mysql/mysql-server:5.6
+    command:
+      - mysqld
+      - "--init-connect='SET NAMES utf8'"
+      - "--collation-server=utf8_general_ci"
+      - "--character-set-server=utf8"
+      - "--innodb-flush-log-at-trx-commit=0"
+    ports:
+      - "0.0.0.0:3306:3306"
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+    # networks:
+    #   - turingmysql
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.5
+    environment:
+      - MYSQL_ROOT_PASSWORD=host
+      - TZ=Asia/Bangkok
+
+  backend:
+    container_name: job-interview-backend
+    build: ./core_app
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      - mysql
+    environment:  
+      - MYSQL_DATABASE=job_interview_db
+      - MYSQL_USER=host
+      - MYSQL_PASSWORD=host
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.6
+    links:
+      - mysql:db
+    # networks:
+    #   - turingmysql
+    restart: on-failure
+
+# # Networks to be created to facilitate communication between containers
+# networks:
+#   turingmysql:
+#     driver: bridge
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.5.0.0/16
+         gateway: 10.5.0.1
+# volumes:
+#   db:
+#     driver: local

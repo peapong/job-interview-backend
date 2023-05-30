@@ -1,0 +1,50 @@
+version: "3.7"
+services:
+  mysql:
+    container_name: mysql_job_interview_db
+    image: "mysql/mysql-server:5.6"
+    environment:
+      - MYSQL_ROOT_PASSWORD=host
+      - TZ=Asia/Bangkok
+    ports:
+      - "3306:3306"
+    command: 
+      - mysqld
+      - "--default-authentication-plugin=mysql_native_password"
+      - "--init-connect='SET NAMES utf8'"
+      - "--collation-server=utf8_general_ci"
+      - "--character-set-server=utf8"
+      - "--innodb-flush-log-at-trx-commit=0"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+      timeout: 20s
+      retries: 10
+    tmpfs:
+      - /var/lib/mysql:rw,noexec,nosuid,size=1024m
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+    networks:
+      - mynetwork
+    restart: always
+  
+  backend:
+    links:
+      - mysql
+    depends_on:
+      - mysql
+    build: ./core_app
+    ports:
+      - "4000:4000"
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: host
+      MYSQL_PASSWORD: host
+      MYSQL_DATABASE: job_interview_db
+      MY_SQL_PORT: 3306
+    networks:
+      - mynetwork
+    restart: always
+
+networks:
+  mynetwork:
+    driver: bridge
