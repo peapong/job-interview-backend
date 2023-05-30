@@ -39,7 +39,7 @@ description
 
  - **Get all data with limit and offset, to use show in card list:**
 
-   เรียกดูข้อมูลผู้นัดสัมภาษณ์ทั้งหมด โดยสามารถกำหนดจำนวนข้อมูลที่จะเรียกได้ (See More)
+   เรียกดูข้อมูลผู้นัดสัมภาษณ์ทั้งหมด โดยสามารถกำหนดจำนวนข้อมูลที่จะเรียกได้ (See More) โดยจะแสดงข้อมูลที่ is_active = 'y' เท่านั้น นั่นคือยังไม่โดนจัดเก็บการ์ด
 
     ```bash
       GET /explorer/job_interview
