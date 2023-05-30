@@ -128,38 +128,38 @@ https://drive.google.com/file/d/1AmJrGxm0VBOqPCF47_T64cm6CXpOoL9I/view?usp=shari
 ```bash
 GET /explorer/job_interview
 ```
-![image](https://lh3.google.com/u/0/d/1AKOgaGiKqYjfCWOih_-rU9znX9WA4N7s=w3730-h1498-iv1)
+![pic](https://lh3.google.com/u/0/d/1AKOgaGiKqYjfCWOih_-rU9znX9WA4N7s=w3730-h1498-iv1)
 
 ```bash
 GET /type_job_interview_status
 ```
-![image](https://lh3.google.com/u/0/d/1OEqAVrp2BxmCIw3gSWXsS4F_BwCF4rSV=w2032-h1498-iv1)
+![pic](https://lh3.google.com/u/0/d/1OEqAVrp2BxmCIw3gSWXsS4F_BwCF4rSV=w2032-h1498-iv1)
 
 ```bash
 PUT /job_interview/:job_master_id
 ```
-![image](https://lh3.google.com/u/0/d/1FVDh7UfqvbAWju83bZgrtPeDpfMFYPhp=w2032-h1498-iv1)
+![pic](https://lh3.google.com/u/0/d/1FVDh7UfqvbAWju83bZgrtPeDpfMFYPhp=w2032-h1498-iv1)
 
 ```bash
 PUT /job_interview/archive/:job_master_id
 ```
-![image](https://lh3.google.com/u/0/d/1PV6CaVRbLf4jIuGRh5HCnWDa2lfHSlNc=w2032-h1498-iv1)
+![pic](https://lh3.google.com/u/0/d/1PV6CaVRbLf4jIuGRh5HCnWDa2lfHSlNc=w2032-h1498-iv1)
 
 - ผลลัพธ์
-![image](https://lh3.google.com/u/0/d/1f97PfcC7gkKN0BPaaBi1Dt1laP4JTSN4=w2032-h1498-iv1)
+![pic](https://lh3.google.com/u/0/d/1f97PfcC7gkKN0BPaaBi1Dt1laP4JTSN4=w2032-h1498-iv1)
 
 ```bash
 GET /job_interview/detail/:job_master_id
 ```
-![image](https://lh3.google.com/u/0/d/1J7-cLflndQVZtTSTAXuRt2Rspk7JykX_=w2032-h1498-iv1)
+![pic](https://lh3.google.com/u/0/d/1J7-cLflndQVZtTSTAXuRt2Rspk7JykX_=w2032-h1498-iv1)
 
 ```bash
 POST /job_interview/detail/:job_master_id
 ```
-![image](https://lh3.google.com/u/0/d/1t_L_uslGvUA33gBMnMUBmNrN2axHSKBv=w2032-h1498-iv1)
+![pic](https://lh3.google.com/u/0/d/1t_L_uslGvUA33gBMnMUBmNrN2axHSKBv=w2032-h1498-iv1)
 
 - ผลลัพธ์
-![image](https://lh3.google.com/u/0/d/1OzEMyhqUkjrdKXw9u73eyXHcoHchZ5CI=w2032-h1498-iv1)
+![pic](https://lh3.google.com/u/0/d/1OzEMyhqUkjrdKXw9u73eyXHcoHchZ5CI=w2032-h1498-iv1)
 
 - Database: type_job_interview_status
-![image](https://lh3.google.com/u/0/d/1aeVAX4n9LFFYmoZQ0hf7bAgJKdewNGWT=w2770-h1498-iv1)
+![pic](https://lh3.google.com/u/0/d/1aeVAX4n9LFFYmoZQ0hf7bAgJKdewNGWT=w2770-h1498-iv1)
