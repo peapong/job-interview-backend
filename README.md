@@ -10,6 +10,17 @@ Test Back-end 'Job Interview Purple'🚀
 
 **Server:** Node, Fastify, Docker
 
+## MySQL Connection
+
+```bash
+MYSQL_DATABASE = job_interview_db
+MYSQL_USER = host
+MYSQL_ROOT_PASSWORD = host
+MYSQL_PASSWORD = host
+MYSQL_HOST = 0.0.0.0
+MY_SQL_PORT = 3306
+```
+
 ## Quickstart
 
 Run project with Makefile
@@ -21,6 +32,7 @@ description
 -  `cd core_app` and run `yarn build` build and complie core_app (node)
 - `docker-compose down`
 - `docker-compose up -d`
+
 
 
 ## API Reference
